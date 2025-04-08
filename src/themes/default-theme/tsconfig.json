@@ -16,7 +16,11 @@
 		"noFallthroughCasesInSwitch": true,
 		"outDir": "dist",
 		"typeRoots": ["./node_modules/@types", "./types"],
-		"noEmitOnError": false
+		"noEmitOnError": false,
+		"paths": {
+			"@components/*": ["assets/ts/components/*"],
+			"@/*": ["assets/ts/*"]
+		}
 	},
 	"include": ["./assets/ts"],
 	"references": [{ "path": "./tsconfig.node.json" }]

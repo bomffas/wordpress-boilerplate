@@ -1,46 +1,52 @@
-// @ts-nocheck
-// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-const createController = (controller: any, $e: any) => {
-	if (!controller) {
+interface ComponentController {
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+	settings?: Record<string, any>;
+	connect?: () => void;
+	bind?: () => void;
+	selectors?: Record<string, string>;
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+	[key: string]: any;
+}
+
+interface ControllerEntry {
+	controllerName: string;
+	controller: new () => ComponentController;
+}
+
+const createController = (
+	controllerEntry: ControllerEntry | undefined,
+	$e: JQuery<HTMLElement>,
+): void => {
+	if (!controllerEntry) {
 		return;
 	}
 
-	const c = new controller();
+	const c = new controllerEntry.controller();
 	c.$controller = $e;
 
-	if (controller.selectors) {
-		jQuery.each(controller.selectors, (key, selectors) => {
+	if (c.selectors) {
+		jQuery.each(c.selectors, (key, selectors) => {
 			const selectorName = `$${String(key)}`;
-
 			c[selectorName] = $e.find(selectors);
 		});
 	}
 
-	//
-	// Initialize
-	//
 	const settings = $e.data("settings");
 	if (settings) {
 		c.settings = $.extend({}, c.settings, settings);
 	}
 
-	if (c.connect) {
-		c.connect();
-	}
-
-	if (c.bind) {
-		c.bind();
-	}
+	c.connect?.();
+	c.bind?.();
 };
 
-// @ts-ignore
-// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-export default (controllers: any) => {
+export default (controllers: ControllerEntry[]): void => {
 	jQuery("[data-component]").each((_i, e) => {
 		const $e = jQuery(e);
 		const controllerName = $e.data("component");
-		const controllerMatch = (_) => _.controllerName === controllerName;
-		const controller = controllers.filter(controllerMatch)[0];
-		createController(controller, $e);
+		const controllerEntry = controllers.find(
+			(c) => c.controllerName === controllerName,
+		);
+		createController(controllerEntry, $e);
 	});
 };
