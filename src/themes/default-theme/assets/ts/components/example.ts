@@ -1,5 +1,5 @@
-export default class BeforeAfter {
-	static controllerName = "before-after";
+export default class Example {
+	static controllerName = "example";
 
 	static selectors: {
 		galleryContainer: string;
@@ -18,10 +18,10 @@ export default class BeforeAfter {
 	private $prevSlide: JQuery<HTMLElement>;
 
 	constructor() {
-		this.$galleryContainer = jQuery(BeforeAfter.selectors.galleryContainer);
-		this.$galleryPages = jQuery(BeforeAfter.selectors.galleryPages);
-		this.$nextSlide = jQuery(BeforeAfter.selectors.nextSlide);
-		this.$prevSlide = jQuery(BeforeAfter.selectors.prevSlide);
+		this.$galleryContainer = jQuery(Example.selectors.galleryContainer);
+		this.$galleryPages = jQuery(Example.selectors.galleryPages);
+		this.$nextSlide = jQuery(Example.selectors.nextSlide);
+		this.$prevSlide = jQuery(Example.selectors.prevSlide);
 	}
 
 	bind(): void {
