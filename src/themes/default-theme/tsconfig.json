@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"target": "ES2020",
+		"useDefineForClassFields": true,
+		"lib": ["ES2020", "DOM", "DOM.Iterable", "ES2015"],
+		"module": "ESNext",
+		"skipLibCheck": true,
+		"moduleResolution": "bundler",
+		"allowImportingTsExtensions": true,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true,
+		"outDir": "dist",
+		"typeRoots": ["./node_modules/@types", "./types"],
+		"noEmitOnError": false
+	},
+	"include": ["./assets/ts"],
+	"references": [{ "path": "./tsconfig.node.json" }]
+}

@@ -1,0 +1,12 @@
+src/debug.log
+src/themes/twenty*
+src/plugins/akismet*
+src/plugins/hello.php
+node_modules
+vendor
+!src/themes/*/core/vendor
+
+database/db/*
+.DS_Store
+!src/languages/themes/twentytwentyfour-pt_BR*
+!src/themes/*/core/rest.php

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/plugins/simple-membership/lib/braintree/lib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/plugins/simple-membership/lib/stripe-gateway/lib" isTestSource="false" packagePrefix="Stripe" />
+      <sourceFolder url="file://$MODULE_DIR$/src/plugins/advanced-custom-fields-pro/includes" isTestSource="false" packagePrefix="ACF" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/copilot/chatSessions" />
+      <excludeFolder url="file://$MODULE_DIR$/src/languages" />
+      <excludeFolder url="file://$MODULE_DIR$/src/plugins" />
+      <excludeFolder url="file://$MODULE_DIR$/src/plugins/jwt-authentication-for-wp-rest-api/includes/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/src/themes/twentytwentyfour" />
+      <excludeFolder url="file://$MODULE_DIR$/src/themes/twentytwentythree" />
+      <excludeFolder url="file://$MODULE_DIR$/src/themes/twentytwentytwo" />
+      <excludeFolder url="file://$MODULE_DIR$/src/themes/default-theme/vendor" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

@@ -1,0 +1,16 @@
+/*
+Theme Name: Default Theme
+Theme URI: https://joaobomfim.com.br
+Author: Default Theme
+Author URI: https://joaobomfim.com.br
+Description:
+Requires at least: 6.4
+Tested up to: 8.0
+Requires PHP: 8.0
+Version: 1.0
+License: N/A
+License URI: N/A
+Text Domain: default_theme
+Tags:
+*/
+@import "./dist/styles.css";
