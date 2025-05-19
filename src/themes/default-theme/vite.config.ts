@@ -1,14 +1,32 @@
 import { defineConfig } from "vite";
 // biome-ignore lint/style/useNodejsImportProtocol: <explanation>
 import path from "path";
+import tailwindcss from "@tailwindcss/vite";
+import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
 	root: "assets",
+	plugins: [
+		tailwindcss(),
+		viteStaticCopy({
+			targets: [
+				{
+					src: path.resolve(__dirname, "./assets/fonts"),
+					dest: "",
+				},
+				{
+					src: path.resolve(__dirname, "./assets/images"),
+					dest: "",
+				},
+			],
+		}),
+	],
 	resolve: {
 		alias: {
 			jquery: "jquery",
 			slick: "slick",
 			"@images": path.resolve(__dirname, "./assets/images"),
+			"@/*": path.resolve(__dirname, "./assets/ts/"),
 		},
 	},
 	build: {
@@ -22,7 +40,7 @@ export default defineConfig({
 			output: {
 				entryFileNames: "[name].js",
 				chunkFileNames: "[name].js",
-				assetFileNames: (assetInfo) => {
+				assetFileNames: (_assetInfo) => {
 					return "[name].[ext]";
 				},
 			},
