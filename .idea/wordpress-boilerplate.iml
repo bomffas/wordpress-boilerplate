@@ -3,9 +3,6 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src/plugins/simple-membership/lib/braintree/lib" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/plugins/simple-membership/lib/stripe-gateway/lib" isTestSource="false" packagePrefix="Stripe" />
-      <sourceFolder url="file://$MODULE_DIR$/src/plugins/advanced-custom-fields-pro/includes" isTestSource="false" packagePrefix="ACF" />
       <excludeFolder url="file://$MODULE_DIR$/.idea/copilot/chatSessions" />
       <excludeFolder url="file://$MODULE_DIR$/src/languages" />
       <excludeFolder url="file://$MODULE_DIR$/src/plugins" />

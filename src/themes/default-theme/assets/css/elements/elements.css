@@ -1,2 +1,2 @@
-@import "header.css";
-@import "footer.css";
+@import "@style/elements/header.css";
+@import "@style/elements/footer.css";

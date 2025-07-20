@@ -26,7 +26,9 @@ export default defineConfig({
 			jquery: "jquery",
 			slick: "slick",
 			"@images": path.resolve(__dirname, "./assets/images"),
-			"@/*": path.resolve(__dirname, "./assets/ts/"),
+			"@ts": path.resolve(__dirname, "./assets/ts"),
+			"@components": path.resolve(__dirname, "./assets/ts/components"),
+			"@style": path.resolve(__dirname, "./assets/css"),
 		},
 	},
 	build: {

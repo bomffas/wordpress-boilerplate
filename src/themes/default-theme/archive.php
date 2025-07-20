@@ -1,5 +1,3 @@
 <?php get_header();  ?>
-	<section"
-		Archive
-	</section>
+	<section> </section>
 <?php get_footer();?>

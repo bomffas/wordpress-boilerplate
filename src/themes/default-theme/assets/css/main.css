@@ -2,10 +2,10 @@
 @import "tailwindcss";
 
 /* Base */
-@import "base/base.css";
+@import "@style/base/base.css";
 
 /* Elements */
-@import "elements/elements.css";
+@import "@style/elements/elements.css";
 
 /* Pages */
-@import "pages/pages.css";
+@import "@style/pages/pages.css";

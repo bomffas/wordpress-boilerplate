@@ -18,8 +18,8 @@
 		"typeRoots": ["./node_modules/@types", "./types"],
 		"noEmitOnError": false,
 		"paths": {
-			"@components/*": ["assets/ts/components/*"],
-			"@/*": ["assets/ts/*"]
+			"@components/*": ["./assets/ts/components/*"],
+			"@ts/*": ["./assets/ts/*"]
 		}
 	},
 	"include": ["./assets/ts"],
