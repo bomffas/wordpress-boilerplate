@@ -1,4 +1,4 @@
-import loader from "@/loader.ts";
+import loader from "@ts/loader";
 import example from "@components/example";
 
 const components = [example];
