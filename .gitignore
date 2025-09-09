@@ -10,3 +10,5 @@ database/db/*
 .DS_Store
 !src/languages/themes/twentytwentyfour-pt_BR*
 !src/themes/*/core/rest.php
+
+.env.example
