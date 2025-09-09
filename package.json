@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint:commit": "commitlint --from=HEAD~1",
-    "install-deps": "pnpm install && cd src/themes/default-theme && pnpm install"
+    "install:deps": "pnpm install && cd src/themes/default-theme && pnpm install"
   },
   "author": "",
   "license": "ISC",
