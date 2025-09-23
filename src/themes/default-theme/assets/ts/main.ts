@@ -1,5 +1,5 @@
-import loader from "@ts/loader";
 import example from "@components/example";
+import loader from "@ts/loader";
 
 const components = [example];
 
