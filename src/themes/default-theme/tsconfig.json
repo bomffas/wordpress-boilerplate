@@ -19,7 +19,8 @@
 		"noEmitOnError": false,
 		"paths": {
 			"@components/*": ["./assets/ts/components/*"],
-			"@ts/*": ["./assets/ts/*"]
+			"@ts/*": ["./assets/ts/*"],
+			"@style/*": ["./assets/css/*"]
 		}
 	},
 	"include": ["./assets/ts"],
