@@ -14,12 +14,12 @@ require_once($config . "browser-sync/browser-sync.php");
 require_once($config . "initial-configs/title-tag.php");
 require_once($config . "initial-configs/block_editor.php");
 
+add_filter('timber/context', function($context) {
 
-/* Start: Register Nav Menu */
-add_action( 'after_setup_theme', 'register_custom_nav_menus' );
-function register_custom_nav_menus(): void {
-	register_nav_menus( array(
-		'menu_principal' => 'Menu Principal',
-	) );
-}
-/* End: Register Nav Menu */
+	//Base Config
+	$context['default'] = array(
+		'logo' => get_field('logo', 'option'),
+	);
+
+	return $context;
+});

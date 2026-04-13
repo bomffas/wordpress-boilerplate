@@ -1,3 +1,3 @@
-<?php get_header();?>
-Index
-<?php get_footer();?>
+<?php
+$context = Timber::context();
+Timber::render( 'views/pages/default.twig', $context, true );
