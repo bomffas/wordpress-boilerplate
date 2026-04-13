@@ -1,0 +1,7 @@
+{% for component in post.meta('components') %}
+
+    {% if component.acf_fc_layout == 'example' %}
+        {% include "components/example.twig" with component %}
+    {% endif %}
+
+{% endfor %}

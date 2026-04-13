@@ -1,5 +1,4 @@
 <?php
-
 function browser_sync(){ ?>
 	<script id="__bs_script__">//<![CDATA[
         (function() {
