@@ -1,3 +1,5 @@
+![image](https://s.w.org/style/images/about/WordPress-logotype-standard.png)
+
 # WordPress Boilerplate
 
 A Docker-based WordPress boilerplate with modern frontend tooling — Vite, TypeScript, and Sass.
