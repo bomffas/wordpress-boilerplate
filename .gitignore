@@ -12,3 +12,7 @@ database/db/*
 !src/themes/*/core/rest.php
 
 .env
+
+**/dist/*
+
+.idea/*
