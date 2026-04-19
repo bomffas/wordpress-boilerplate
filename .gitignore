@@ -11,4 +11,8 @@ database/db/*
 !src/languages/themes/twentytwentyfour-pt_BR*
 !src/themes/*/core/rest.php
 
-.env.example
+.env
+
+**/dist/*
+
+.idea/*
