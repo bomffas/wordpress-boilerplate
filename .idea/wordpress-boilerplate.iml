@@ -11,6 +11,10 @@
       <excludeFolder url="file://$MODULE_DIR$/src/themes/twentytwentythree" />
       <excludeFolder url="file://$MODULE_DIR$/src/themes/twentytwentytwo" />
       <excludeFolder url="file://$MODULE_DIR$/src/themes/default-theme/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/database/db/clientProjet" />
+      <excludeFolder url="file://$MODULE_DIR$/database/db/mysql" />
+      <excludeFolder url="file://$MODULE_DIR$/database/db/performance_schema" />
+      <excludeFolder url="file://$MODULE_DIR$/database/db/sys" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
