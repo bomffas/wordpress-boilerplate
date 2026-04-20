@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build --emptyOutDir",
+    "all": "run-s build sass:build",
     "watch": "vite build --watch",
     "preview": "vite preview",
     "browser-sync": "browser-sync start --reload-delay 100 --files './assets/**/*.ts' './assets/**/*.scss' './**/*.twig'",
@@ -17,11 +18,11 @@
     "stylelint:scss:fix": "stylelint \"**/*.scss\" --fix"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.2.4",
     "@rollup/plugin-inject": "^5.0.5",
     "@types/jquery": "^3.5.32",
     "@types/slick-carousel": "^1.6.40",
     "autoprefixer": "^10.4.21",
+    "baseline-browser-mapping": "^2.10.20",
     "browser-sync": "^3.0.4",
     "cssnano": "^7.1.1",
     "cssnano-preset-lite": "^4.0.4",

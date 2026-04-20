@@ -33,7 +33,7 @@ post-merge:
 post-checkout:
   commands:
     install-deps:
-      files: git diff --name-only {1} {2}
+      files: git diff --name-only $LEFTHOOK_CHECKOUT_PREVIOUS_HEAD $LEFTHOOK_CHECKOUT_NEW_HEAD
       glob: "**/package.json"
       run: pnpm run install:deps
 

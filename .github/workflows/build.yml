@@ -1,0 +1,36 @@
+name: Build
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build:
+    name: Build Theme
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Install root dependencies
+        env:
+          NODE_OPTIONS: --no-deprecation
+        run: pnpm install
+
+      - name: Install theme dependencies
+        working-directory: src/themes/default-theme
+        run: pnpm install
+
+      - name: Build theme
+        working-directory: src/themes/default-theme
+        run: pnpm run all
